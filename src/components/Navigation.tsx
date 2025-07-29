@@ -6,74 +6,56 @@ const Navigation = () => {
   return (
     <nav className="fixed top-0 w-full bg-gray-900/95 backdrop-blur-sm border-b border-gray-800 z-40 shadow-lg">
       <div className="max-w-6xl mx-auto px-4 py-4">
-        <div className="flex justify-between items-center">
-          {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-to-r from-pink-500 to-purple-500 rounded-lg flex items-center justify-center">
-              <span className="font-bold text-white text-lg">SK</span>
-            </div>
-            <div className="hidden sm:block">
-              <h1 className="font-semibold text-white">Srishti Khosla</h1>
-              <p className="text-xs text-gray-400">Full Stack Developer</p>
-            </div>
-          </div>
-
+        <div className="flex justify-center items-center"> {/* Changed justify-between to justify-center */}
+            
           {/* Desktop Navigation Links */}
-          <div className="hidden md:flex items-center space-x-1">
+          <div className="hidden md:flex items-center justify-center space-x-6"> {/* Added justify-center and increased space-x */}
             <a 
               href="#home" 
-              className="px-4 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg transition-all duration-200 relative group"
+              className="px-4 py-2 text-gray-300 hover:text-white rounded-lg transition-all duration-200 relative group text-center"
             >
               Home
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-pink-500 to-purple-500 group-hover:w-full transition-all duration-200"></span>
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-slate-500 group-hover:w-full transition-all duration-200"></span>
             </a>
             <a 
               href="#about" 
-              className="px-4 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg transition-all duration-200 relative group"
+              className="px-4 py-2 text-gray-300 hover:text-white rounded-lg transition-all duration-200 relative group text-center"
             >
               About
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-pink-500 to-purple-500 group-hover:w-full transition-all duration-200"></span>
+             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-slate-500 group-hover:w-full transition-all duration-200"></span>
             </a>
             <a 
               href="#skills" 
-              className="px-4 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg transition-all duration-200 relative group"
+              className="px-4 py-2 text-gray-300 hover:text-white rounded-lg transition-all duration-200 relative group text-center"
             >
               Skills
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-pink-500 to-purple-500 group-hover:w-full transition-all duration-200"></span>
+             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-slate-500 group-hover:w-full transition-all duration-200"></span>
             </a>
             <a 
               href="#experience" 
-              className="px-4 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg transition-all duration-200 relative group"
+              className="px-4 py-2 text-gray-300 hover:text-white rounded-lg transition-all duration-200 relative group text-center"
             >
               Experience
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-pink-500 to-purple-500 group-hover:w-full transition-all duration-200"></span>
+             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-slate-500 group-hover:w-full transition-all duration-200"></span>
             </a>
             <a 
               href="#projects" 
-              className="px-4 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg transition-all duration-200 relative group"
+              className="px-4 py-2 text-gray-300 hover:text-white rounded-lg transition-all duration-200 relative group text-center"
             >
               Projects
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-pink-500 to-purple-500 group-hover:w-full transition-all duration-200"></span>
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-slate-500 group-hover:w-full transition-all duration-200"></span>
             </a>
             <a 
               href="#contact" 
-              className="px-4 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg transition-all duration-200 relative group"
+              className="px-4 py-2 text-gray-300 hover:text-white rounded-lg transition-all duration-200 relative group text-center"
             >
               Contact
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-pink-500 to-purple-500 group-hover:w-full transition-all duration-200"></span>
-            </a>
-            
-            {/* CTA Button */}
-            <a 
-              href="#contact" 
-              className="ml-4 px-6 py-2 bg-gradient-to-r from-pink-600 to-purple-600 text-white rounded-lg hover:from-pink-700 hover:to-purple-700 transition-all transform hover:scale-105 shadow-lg"
-            >
-              Hire Me
+             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-slate-500 group-hover:w-full transition-all duration-200"></span>
             </a>
           </div>
 
-          {/* Mobile Menu Button */}
-          <div className="md:hidden">
+          {/* Move Mobile Menu Button to the right edge */}
+          <div className="md:hidden absolute right-4">
             <button 
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="p-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg transition-colors"
@@ -85,10 +67,10 @@ const Navigation = () => {
           </div>
         </div>
 
-        {/* Mobile Navigation Menu */}
+        {/* Mobile Navigation Menu - Update to center align items */}
         {mobileMenuOpen && (
           <div className="md:hidden mt-4 pb-4 border-t border-gray-800">
-            <div className="flex flex-col space-y-2 pt-4">
+            <div className="flex flex-col items-center space-y-2 pt-4"> {/* Added items-center */}
               <a 
                 href="#home" 
                 onClick={() => setMobileMenuOpen(false)}
@@ -146,4 +128,4 @@ const Navigation = () => {
   );
 };
 
-export default Navigation; 
+export default Navigation;

@@ -1,8 +1,14 @@
 @import "tailwindcss";
-
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --navy-700: #1a365d;
+  --navy-800: #153e75;
+  --navy-900: #1e3a8a;
+  --accent-100: #7dd3fc;
+  --accent-200: #38bdf8;
+  --accent-300: #0ea5e9;
+
+  /* Font family variables */
+ --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
 }
 
 @theme inline {
@@ -24,9 +30,33 @@ html {
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--navy-900);
+  color: var(--accent-100);
+  font-family: var(--font-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: -0.02em;
+}
+
+/* Add custom heading styles */
+.hero-heading {
+  font-size: clamp(3.5rem, 7vw, 7rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.hero-subheading {
+  font-size: clamp(1.25rem, 3vw, 1.875rem);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+
+.hero-description {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  opacity: 0.9;
 }
 
 /* Custom scrollbar */
@@ -59,8 +89,109 @@ body {
     background-position: 0% 50%;
   }
 }
-
 .animate-gradient {
   background-size: 200% 200%;
   animation: gradient 3s ease infinite;
+}
+
+/* Terminal styles */
+.terminal-container {
+  background: rgba(90, 132, 187, 0.15);  /* Lighter background for frosted look */
+  backdrop-filter: blur(12px);  /* Increased blur */
+  -webkit-backdrop-filter: blur(12px);  /* For Safari support */
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  box-shadow: 
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06),
+    inset 0 0 20px rgba(125, 211, 252, 0.05);  /* Inner glow */
+  font-family: var(--font-mono);
+}
+
+.terminal-container::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 0.75rem;
+  padding: 1px;
+  background: linear-gradient(
+    135deg,
+    rgba(125, 211, 252, 0.2),  /* accent-100 */
+    rgba(14, 165, 233, 0.1)    /* accent-300 */
+  );
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.tech-logo-container {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideUpFade 0.5s ease-out forwards;
+}
+
+.typing-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1.2em;
+  background-color: var(--accent-200);
+  margin-left: 4px;
+  animation: blink 1s step-end infinite;
+}
+
+/* Animations */
+@keyframes slideUpFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes blink {
+  from, to { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Custom gradients */
+.hero-gradient {
+  background: linear-gradient(to bottom right, var(--navy-900), var(--navy-800), var(--navy-700));
+}
+
+.text-gradient {
+  background: linear-gradient(to right, var(--accent-100), var(--accent-300));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.button-gradient {
+  background: linear-gradient(to right, var(--accent-200), var(--accent-300));
+  color: var(--navy-900);
+}
+
+.button-gradient:hover {
+  background: linear-gradient(to right, var(--accent-300), var(--accent-200));
+  transform: scale(1.05);
+}
+
+/* Update heading styles */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-primary);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+
+/* Ensure buttons have consistent font */
+.button-gradient,
+a[href] {
+  font-family: var(--font-primary);
+  font-weight: 500;
 }
