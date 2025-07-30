@@ -220,26 +220,26 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Side - Hero Content */}
           <div className="text-center lg:text-left">
-  <h1 className="hero-heading text-slate-300 mb-4">
+  <h1 className="hero-heading text-white mb-4">
   <span className="text-[clamp(2.5rem,6vw,3.5rem)]">Hi, I'm</span>{" "}
  <span className="block text-[clamp(3.5rem,8vw,7rem)] bg-slate-300 bg-clip-text text-transparent">
   Srishti
 </span>
 </h1>
-  <p className="hero-subheading text-gray-300 mb-8">
+  <p className="hero-subheading text-slate-100 mb-8">
     Cloud-Native Full Stack Developer
   </p>
-  <p className="hero-description text-gray-400 mb-10">
+  <p className="hero-description text-slate-200 mb-10">
     Passionate about creating innovative web solutions and bringing ideas to life through clean, efficient code.
   </p>
   <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-    <a href="#projects" className="px-8 py-3 bg-gray-600 text-gray-300 rounded-lg hover:bg-gray-700 transition-all transform hover:scale-105 shadow-lg font-medium">
+    <a href="#projects" className="px-8 py-3 bg-slate-600 text-white rounded-lg hover:bg-gray-200 hover:text-slate-600 transition-all transform hover:scale-105 shadow-lg font-medium">
       View My Work
     </a>
    <a 
   href="/resume/SrishtiKhosla.pdf" 
   download="SrishtiKhosla_Resume.pdf"
-  className="px-8 py-3 bg-gray-600 text-gray-300 rounded-lg hover:bg-gray-700 transition-colors font-medium inline-flex items-center gap-2"
+  className="px-8 py-3 bg-slate-600 text-white rounded-lg hover:bg-gray-200 hover:text-slate-600 transition-all transform hover:scale-105 shadow-lg transition-colors font-medium inline-flex items-center gap-2"
 >
   <svg 
     xmlns="http://www.w3.org/2000/svg" 
@@ -266,12 +266,6 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Scroll Indicator */}
-        <div className="text-center mt-12">
-          <div className="animate-bounce">
-            <ChevronDown size={24} className="mx-auto text-pink-400" />
-          </div>
-        </div>
       </div>
     </section>
   );
