@@ -1,10 +1,10 @@
 import React from 'react';
-import { MapPin, GraduationCap, Code, Globe } from 'lucide-react';
+import { MapPin, GraduationCap, Code} from 'lucide-react';
 import Image from 'next/image';
 
 const About = () => {
   return (
-    <section id="about" className="py-20 bg-gradient-to-br from-navy-900 via-navy-800 to-navy-700">
+    <section id="about" className="py-20">
       <div className="max-w-6xl mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
@@ -26,31 +26,27 @@ const About = () => {
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
                   <MapPin size={20} className="text-white" />
-                  <span className="text-gray-300">Based in Melbourne, Australia</span>
+                  <span className="text-gray-300">Melbourne, Australia</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <GraduationCap size={20} className="text-white" />
-                  <span className="text-gray-300">B.Sc Computer Science Graduate</span>
+                  <span className="text-gray-300">B.Sc Computer Science, RMIT University</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <Code size={20} className="text-white" />
-                  <span className="text-gray-300">3+ years of development experience</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <Globe size={20} className="text-white" />
-                  <span className="text-gray-300">Available for remote work</span>
+                  <span className="text-gray-300">3 years of development experience</span>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="relative">
-            <div className="aspect-square overflow-hidden rounded-full border-4 border-white/10">
+          <div className="relative flex justify-center">
+            <div className="aspect-square overflow-hidden rounded-full border-4 border-white/10 w-[400px]">
               <Image
                 src="/self.jpg"
                 alt="Profile picture"
-                width={600}
-                height={600}
+                width={400}
+                height={400}
                 className="object-cover"
                 priority
               />

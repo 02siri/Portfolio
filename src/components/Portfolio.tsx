@@ -2,7 +2,6 @@ import React from 'react';
 import Navigation from './Navigation';
 import Hero from './Hero';
 import About from './About';
-import Skills from './Skills';
 import Experience from './Experience';
 import Projects from './Projects';
 import Contact from './Contact';
@@ -10,11 +9,10 @@ import Footer from './Footer';
 
 const Portfolio = () => {
   return (
-    <div className="min-h-screen bg-gray-900 text-white">
+    <div className="min-h-screen **:text-white">
       <Navigation />
       <Hero />
       <About />
-      <Skills />
       <Experience />
       <Projects />
       <Contact />

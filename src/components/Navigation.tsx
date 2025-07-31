@@ -25,13 +25,6 @@ const Navigation = () => {
              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-slate-500 group-hover:w-full transition-all duration-200"></span>
             </a>
             <a 
-              href="#skills" 
-              className="px-4 py-2 text-gray-300 hover:text-white rounded-lg transition-all duration-200 relative group text-center"
-            >
-              Skills
-             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-slate-500 group-hover:w-full transition-all duration-200"></span>
-            </a>
-            <a 
               href="#experience" 
               className="px-4 py-2 text-gray-300 hover:text-white rounded-lg transition-all duration-200 relative group text-center"
             >

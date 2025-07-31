@@ -27,15 +27,24 @@
 
 html {
   scroll-behavior: smooth;
+  min-height: 100vh;
+  /* Apply the gradient to the root html element */
+  background: linear-gradient(to bottom right, #0f172a, #1e293b, #334155);
+  background-attachment: fixed; /* Keeps gradient fixed during scroll */
 }
 
 body {
-  background: var(--navy-900);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  /* Remove the old background and make body transparent */
+  background: transparent;
   color: var(--accent-100);
   font-family: var(--font-primary);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   letter-spacing: -0.02em;
+  overflow-x: hidden;
 }
 
 /* Add custom heading styles */
