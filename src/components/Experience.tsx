@@ -1,29 +1,32 @@
 import React from 'react';
-import { Calendar, MapPin, ArrowRight } from 'lucide-react';
+import { Calendar, MapPin, ArrowRight, User, Briefcase } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const Experience = () => {
   const experience = [
     {
       id: 1,
-      role: "Team Leader, Scrum Master and Dev Team Member (WIL)",
+      role: "Software Development Intern",
+      description: "Team Leader, Scrum Master & Dev Team Member",
       company: "Phi Technologies",
       duration: "March 2025 - June 2025",
       location: "Melbourne, Australia",
       achievements: [
         "Led cross-functional development team while managing Agile ceremonies, sprint planning, and product backlog maintenance to ensure deliverables align with client requirements and project timelines",
-        "Developed comprehensive MVP dashboards for multiple stakeholders (admin, retailers, insurers), implemented advanced search and real-time analytics, and designed physical kiosk UI using React, TypeScript, Next.js, Chakra UI, Framer Motion, and Tailwind CSS"
+        "Built a role-based dashboard ecosystem (admin, retailers, insurers, customers) with real-time analytics and interactive workflows using React.js and TypeScript",
+        "Designed and integrated a self-service returns and claims kiosk, streamlining logistics and device assessment processes"
       ]
     },
     {
       id: 2,
       role: "Peer Mentor",
+      description: "Software Engineering Fundamentals & Java Programming",
       company: "RMIT University",
       duration: "March 2025 - June 2025",
       location: "Melbourne, Australia",
       achievements: [
-        "Mentored students in Software Engineering Fundamentals and Further Programming courses, providing guidance on core programming concepts and best practices",
-        "Assisted students with assignment comprehension and problem-solving approaches, helping them develop structured methodologies for academic success"
+        "Mentored students on core software engineering concepts and programming fundamentals",
+"Guided structured problem-solving and assignment breakdown strategies for academic success"
       ]
     }
   ];
@@ -134,9 +137,15 @@ const Experience = () => {
                     whileHover={{ scale: 1.02 }}
                     transition={{ type: "spring", damping: 15 }}
                   >
-                    <h3 className="text-xl font-semibold text-white mb-2">{exp.role}</h3>
-                    <p className="text-blue-400 font-medium mb-4">{exp.company}</p>
-                    
+                    <div className="flex items-center gap-2 mb-2">
+                      <User size={18} className="text-slate-400" />
+                      <h3 className="text-xl font-semibold text-white">{exp.role}</h3>
+                      </div>
+                    <p className="text-slate-300 text-sm mb-3 italic">{exp.description}</p>
+                    <div className="flex items-center gap-2 mb-4">
+                     <Briefcase size={16} className="text-blue-400" />
+                    <p className="text-blue-400 font-medium">{exp.company}</p>
+                    </div>
                     <ul className="space-y-3">
                       {exp.achievements.map((achievement, i) => (
                         <motion.li

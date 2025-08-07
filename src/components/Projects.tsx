@@ -62,7 +62,7 @@ const Projects = () => {
       title: "VetCare",
       description: "Veterinary clinic management system for pet healthcare services",
       image: "/projects/VetCare/VetCare.JPG",
-      tech: ["Java","SpringBoot","BootStrap","Maven","MySQL","Flyway","Docker","JDBC","JUnit"],
+      tech: ["Java","BootStrap","SpringBoot","Maven","MySQL","Flyway","Docker","JDBC","JUnit"],
       github: "https://github.com/02siri/VetCare",
       live: "#",
       details: "A comprehensive veterinary clinic management system featuring appointment scheduling, patient records management, treatment tracking, and billing integration for efficient pet healthcare services."
