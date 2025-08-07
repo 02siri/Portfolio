@@ -19,43 +19,53 @@ const Projects = () => {
   const projects: Project[] = [
     {
       id: 1,
-      title: "E-Commerce Platform",
-      description: "Full-stack e-commerce solution with React, Node.js, and MongoDB",
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
-      tech: ["React", "Node.js", "MongoDB", "Stripe"],
-      github: "https://github.com",
-      live: "https://demo.com",
-      details: "A comprehensive e-commerce platform featuring user authentication, product catalog, shopping cart, payment integration, and admin dashboard. Built with modern web technologies ensuring responsive design and optimal performance."
+      title: "LoopedIn",
+      description: "Serverless music subscription web application with AWS cloud architecture",
+      image: "/projects/LoopedIn/LI_Home.png",
+      tech: ["Next.js","React.js","TypeScript","HTML", "Tailwind CSS", "Node.js","AWS S3","AWS DynamoDB","AWS APIGateway","AWS Lambda","AWS EC2"],
+      github: "https://github.com/02siri/LoopedIn",
+      live: "https://looped-in-pi.vercel.app/",
+      details: "A sophisticated serverless music subscription platform built with AWS services including Lambda, DynamoDB, and S3. Features real-time subscription management, user authentication, flexible metadata queries, and scalable cloud architecture with automatic partitioning and horizontal scalability."
     },
     {
       id: 2,
-      title: "Task Management App",
-      description: "Collaborative project management tool with real-time updates",
-      image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop",
-      tech: ["Next.js", "TypeScript", "PostgreSQL", "Socket.io"],
-      github: "https://github.com",
-      live: "https://demo.com",
-      details: "A real-time collaborative task management application with drag-and-drop functionality, team collaboration features, and comprehensive project tracking capabilities."
+      title: "TeachTeam",
+      description: "Educational platform for collaborative learning and team management",
+      image: "/projects/TeachTeam/TeachTeam.png",
+      tech: ["Next.js","React.js","TypeScript","HTML", "Tailwind CSS","Express.js", "Node.js", "MySQL", "TypeORM", "GraphQL", "Jest"],
+      github: "https://github.com/02siri/TeachTeam",
+      live: "#",
+      details: "An educational platform designed to facilitate collaborative learning environments. Features team formation, project management tools, assignment tracking, and communication features for students and educators."
     },
     {
       id: 3,
-      title: "Weather Analytics Dashboard",
-      description: "Data visualization dashboard for weather patterns and predictions",
-      image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=600&h=400&fit=crop",
-      tech: ["Vue.js", "D3.js", "Python", "Flask"],
-      github: "https://github.com",
-      live: "https://demo.com",
-      details: "An interactive weather analytics dashboard featuring historical data analysis, predictive modeling, and beautiful data visualizations using D3.js and modern web technologies."
+      title: "BurritoKing",
+      description: "Restaurant management and ordering system with modern UI",
+      image: "/projects/BurritoKing/BurritoKing.png",
+      tech: ["Java", "JavaFX", "SceneBuilder", "JDK", "JDBC", "SQLite", "JUnit"],
+      github: "https://github.com/02siri/BurritoKing",
+      live: "#",
+      details: "A comprehensive restaurant management system featuring online ordering, menu management, order tracking, and customer management. Built with modern web technologies for optimal user experience."
     },
     {
       id: 4,
-      title: "Social Media Dashboard",
-      description: "Analytics platform for social media performance tracking",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
-      tech: ["React", "Chart.js", "Express", "MySQL"],
-      github: "https://github.com",
-      live: "https://demo.com",
-      details: "A comprehensive social media analytics dashboard that tracks performance across multiple platforms with beautiful data visualizations and detailed reporting features."
+      title: "AirStay",
+      description: "Accommodation booking platform inspired by modern hospitality needs",
+      image: "/projects/AirStay/AirStay.png",
+      tech: ["HTML","Tailwind CSS", "Express.js", "Node.js", "MongoDB"],
+      github: "https://github.com/02siri/AirStay",
+      live: "#",
+      details: "A full-stack accommodation booking platform with property listings, booking management, user authentication, search and filtering capabilities, and responsive design for seamless booking experiences."
+    },
+    {
+      id: 5,
+      title: "VetCare",
+      description: "Veterinary clinic management system for pet healthcare services",
+      image: "/projects/VetCare/VetCare.JPG",
+      tech: ["Java","SpringBoot","BootStrap","Maven","MySQL","Flyway","Docker","JDBC","JUnit"],
+      github: "https://github.com/02siri/VetCare",
+      live: "#",
+      details: "A comprehensive veterinary clinic management system featuring appointment scheduling, patient records management, treatment tracking, and billing integration for efficient pet healthcare services."
     }
   ];
 
@@ -156,7 +166,7 @@ const Projects = () => {
                         <div className="flex gap-4">
                           <button 
                             onClick={() => setSelectedProject(project)}
-                            className="px-6 py-2 bg-gradient-to-r from-pink-600 to-purple-600 text-white rounded-lg hover:from-pink-700 hover:to-purple-700 transition-all transform hover:scale-105"
+                            className="px-6 py-2 bg-gradient-to-r from-pink-600 to-purple-600 text-white rounded-lg hover:from-pink-700 hover:to-purple-700 transition-all transform hover:scale-105 cursor-pointer"
                           >
                             View Details
                           </button>

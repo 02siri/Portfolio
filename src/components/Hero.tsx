@@ -34,11 +34,11 @@ const Hero = () => {
     {
       title: "Cloud",
       skills: [
-        { name: "AWS S3", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" },
-        { name: "AWS DynamoDB", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" },
-        { name: "AWS EC2", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" },
-        { name: "AWS Lambda", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" },
-        { name: "AWS API Gateway", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" },
+        { name: "AWS S3", logo: "/aws-icons/Arch_Amazon-Simple-Storage-Service_16.svg" },
+        { name: "AWS DynamoDB", logo: "/aws-icons/Arch_Amazon-DynamoDB_16.svg" },
+        { name: "AWS EC2", logo: "/aws-icons/Arch_Amazon-EC2_16.svg" },
+        { name: "AWS Lambda", logo: "/aws-icons/Arch_AWS-Lambda_16.svg" },
+        { name: "AWS API Gateway", logo: "/aws-icons/Arch_Amazon-API-Gateway_16.svg" },
         { name: "Azure Data Studio", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" }
       ]
     },
@@ -46,7 +46,8 @@ const Hero = () => {
       title: "DevOps",
       skills: [
         { name: "GitHub", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" },
-        { name: "GitHub Actions", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" }
+        { name: "GitHub Actions", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" },
+        { name: "Docker", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker.svg"}
       ]
     },
     {
