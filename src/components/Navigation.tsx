@@ -8,6 +8,11 @@ const Navigation = () => {
       <div className="max-w-6xl mx-auto px-4 py-4">
         <div className="flex justify-center items-center"> {/* Changed justify-between to justify-center */}
             
+           {/* Left Corner Image */}
+          <div className="flex items-center">
+            <img src="/memoji_bulb.png" alt="MemojiBulb" className="h-14 w-14 mr-2" />
+          </div>
+
           {/* Desktop Navigation Links */}
           <div className="hidden md:flex items-center justify-center space-x-6"> {/* Added justify-center and increased space-x */}
             <a 
@@ -45,6 +50,10 @@ const Navigation = () => {
               Contact
              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-slate-500 group-hover:w-full transition-all duration-200"></span>
             </a>
+          </div>
+
+          <div className="flex items-center">
+            <img src="/memoji_mac.png" alt="Memoji Mac" className="h-12 w-12 mr-2" />
           </div>
 
           {/* Move Mobile Menu Button to the right edge */}

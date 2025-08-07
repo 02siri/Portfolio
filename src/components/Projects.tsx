@@ -8,7 +8,7 @@ interface Project {
   image: string;
   tech: string[];
   github: string;
-  live: string;
+  live?: string;
   details: string;
 }
 
@@ -34,7 +34,6 @@ const Projects = () => {
       image: "/projects/TeachTeam/TeachTeam.png",
       tech: ["Next.js","React.js","TypeScript","HTML", "Tailwind CSS","Express.js", "Node.js", "MySQL", "TypeORM", "GraphQL", "Jest"],
       github: "https://github.com/02siri/TeachTeam",
-      live: "#",
       details: "An educational platform designed to facilitate collaborative learning environments. Features team formation, project management tools, assignment tracking, and communication features for students and educators."
     },
     {
@@ -44,7 +43,6 @@ const Projects = () => {
       image: "/projects/BurritoKing/BurritoKing.png",
       tech: ["Java", "JavaFX", "SceneBuilder", "JDK", "JDBC", "SQLite", "JUnit"],
       github: "https://github.com/02siri/BurritoKing",
-      live: "#",
       details: "A comprehensive restaurant management system featuring online ordering, menu management, order tracking, and customer management. Built with modern web technologies for optimal user experience."
     },
     {
@@ -54,7 +52,6 @@ const Projects = () => {
       image: "/projects/AirStay/AirStay.png",
       tech: ["HTML","Tailwind CSS", "Express.js", "Node.js", "MongoDB"],
       github: "https://github.com/02siri/AirStay",
-      live: "#",
       details: "A full-stack accommodation booking platform with property listings, booking management, user authentication, search and filtering capabilities, and responsive design for seamless booking experiences."
     },
     {
@@ -64,7 +61,6 @@ const Projects = () => {
       image: "/projects/VetCare/VetCare.JPG",
       tech: ["Java","BootStrap","SpringBoot","Maven","MySQL","Flyway","Docker","JDBC","JUnit"],
       github: "https://github.com/02siri/VetCare",
-      live: "#",
       details: "A comprehensive veterinary clinic management system featuring appointment scheduling, patient records management, treatment tracking, and billing integration for efficient pet healthcare services."
     }
   ];
@@ -100,7 +96,7 @@ const Projects = () => {
               <h4 className="font-semibold mb-2 text-white">Technologies Used:</h4>
               <div className="flex flex-wrap gap-2">
                 {project.tech.map((tech, index) => (
-                  <span key={index} className="px-3 py-1 bg-purple-900 text-purple-300 rounded-full text-sm">
+                  <span key={index} className="px-3 py-1 bg-slate-500 rounded-sm text-sm">
                     {tech}
                   </span>
                 ))}
@@ -115,13 +111,15 @@ const Projects = () => {
                 <Github size={20} />
                 View Code
               </a>
-              <a 
-                href={project.live}
-                className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-pink-600 to-purple-600 text-white rounded-lg hover:from-pink-700 hover:to-purple-700 transition-colors"
-              >
-                <ExternalLink size={20} />
-                Live Demo
-              </a>
+              {project.live && (
+                <a 
+                  href={project.live}
+                  className="flex items-center gap-2 px-4 py-2 border border-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors"
+                >
+                  <ExternalLink size={20} />
+                  Live
+                </a>
+              )}
             </div>
           </div>
         </div>
@@ -132,14 +130,14 @@ const Projects = () => {
   return (
     <section id="projects" className="py-20">
       <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent">Featured Projects</h2>
+        <h2 className="text-4xl font-bold text-center mb-16 text-transparent">Featured Projects</h2>
         
         <div className="relative">
           <div className="overflow-hidden rounded-lg">
             <div className="flex transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${currentProjectIndex * 100}%)` }}>
               {projects.map((project) => (
                 <div key={project.id} className="w-full flex-shrink-0">
-                  <div className="bg-gray-800 rounded-lg shadow-lg hover:shadow-pink-500/20 hover:shadow-2xl transition-all overflow-hidden border border-gray-700 mx-2">
+                  <div className="bg-slate-800/80 rounded-lg shadow-lg hover:shadow-2xl transition-all overflow-hidden border border-gray-700 mx-2">
                     <div className="md:flex">
                       <div className="md:w-1/2">
                         <div className="relative overflow-hidden h-64 md:h-full">
@@ -157,7 +155,7 @@ const Projects = () => {
                         
                         <div className="flex flex-wrap gap-2 mb-6">
                           {project.tech.map((tech, index) => (
-                            <span key={index} className="px-3 py-1 bg-gradient-to-r from-pink-900 to-purple-900 text-pink-300 rounded-full text-sm">
+                            <span key={index} className="px-3 py-1 bg-slate-500 rounded-sm text-sm">
                               {tech}
                             </span>
                           ))}
@@ -166,22 +164,24 @@ const Projects = () => {
                         <div className="flex gap-4">
                           <button 
                             onClick={() => setSelectedProject(project)}
-                            className="px-6 py-2 bg-gradient-to-r from-pink-600 to-purple-600 text-white rounded-lg hover:from-pink-700 hover:to-purple-700 transition-all transform hover:scale-105 cursor-pointer"
+                            className="px-6 py-2 border border-gray-600 text-gray-300 rounded-lg hover:bg-gray-700 hover:border-slate-900 transition-all transform hover:scale-105 cursor-pointer"
                           >
                             View Details
                           </button>
                           <a 
                             href={project.github}
-                            className="p-2 border border-gray-600 text-gray-300 rounded-lg hover:bg-gray-700 hover:border-pink-500 transition-colors"
+                            className="p-2 border border-gray-600 text-gray-300 rounded-lg hover:bg-gray-700 hover:border-slate-900 transition-colors cursor-pointer"
                           >
                             <Github size={20} />
                           </a>
-                          <a 
-                            href={project.live}
-                            className="p-2 border border-gray-600 text-gray-300 rounded-lg hover:bg-gray-700 hover:border-purple-500 transition-colors"
-                          >
-                            <ExternalLink size={20} />
-                          </a>
+                          {project.live && (
+                            <a 
+                              href={project.live}
+                              className="p-2 border border-gray-600 text-gray-300 rounded-lg hover:bg-gray-700 hover:border-slate-900 transition-colors cursor-pointer"
+                            >
+                              <ExternalLink size={20} />
+                            </a>
+                          )}
                         </div>
                       </div>
                     </div>
@@ -194,13 +194,13 @@ const Projects = () => {
           {/* Carousel Controls */}
           <button 
             onClick={prevProject}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-3 rounded-full shadow-lg hover:bg-gray-700 transition-colors border border-gray-600 hover:border-pink-500"
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-3 rounded-full shadow-lg hover:bg-gray-700 transition-colors border border-gray-600"
           >
             <ChevronLeft size={24} />
           </button>
           <button 
             onClick={nextProject}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-3 rounded-full shadow-lg hover:bg-gray-700 transition-colors border border-gray-600 hover:border-purple-500"
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-3 rounded-full shadow-lg hover:bg-gray-700 transition-colors border border-gray-600"
           >
             <ChevronRight size={24} />
           </button>
@@ -213,7 +213,7 @@ const Projects = () => {
                 onClick={() => setCurrentProjectIndex(index)}
                 className={`w-3 h-3 rounded-full transition-all ${
                   index === currentProjectIndex 
-                    ? 'bg-gradient-to-r from-pink-500 to-purple-500' 
+                    ? 'bg-slate-300' 
                     : 'bg-gray-600 hover:bg-gray-500'
                 }`}
               />
@@ -228,4 +228,4 @@ const Projects = () => {
   );
 };
 
-export default Projects; 
+export default Projects;
