@@ -12,14 +12,14 @@ const About = () => {
             
             <div className="space-y-6">
               <p className="text-gray-300 leading-relaxed text-lg">
-                I'm a passionate full-stack developer with a Bachelor's degree in Computer Science from RMIT University. 
+                I&apos;m a passionate full-stack developer with a Bachelor&apos;s degree in Computer Science from RMIT University. 
                 My journey in technology began with curiosity about how things work behind the screen, and it has evolved 
                 into a deep love for creating digital solutions that make a difference.
               </p>
               
               <p className="text-gray-300 leading-relaxed text-lg mb-8">
                 I thrive in collaborative environments and continuously seek to refine my skills while staying updated 
-                with industry trends. Outside of coding, I'm driven by a curiosity to learn, build, and make a meaningful 
+                with industry trends. Outside of coding, I&apos;m driven by a curiosity to learn, build, and make a meaningful 
                 impact through technology.
               </p>
 
