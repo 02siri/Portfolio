@@ -239,7 +239,7 @@ const Hero = () => {
           {/* Left Side - Hero Content */}
           <div className="text-center lg:text-left">
   <h1 className="hero-heading text-white mb-4">
-  <span className="text-[clamp(2.5rem,6vw,3.5rem)]">Hi, I'm</span>{" "}
+  <span className="text-[clamp(2.5rem,6vw,3.5rem)]">Hi, I&apos;m</span>{" "}
  <span className="block text-[clamp(3.5rem,8vw,7rem)] bg-slate-300 bg-clip-text text-transparent">
   Srishti
 </span>

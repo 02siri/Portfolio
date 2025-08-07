@@ -9,7 +9,7 @@ const Contact = () => {
         
         <div className="text-center mb-12">
           <p className="text-lg text-gray-300 mb-8">
-            I'm always open to discussing new opportunities, interesting projects, or just having a chat about technology.
+          I&apos;m always open to discussing new opportunities, interesting projects, or just having a chat about technology.
           </p>
           
           <div className="flex justify-center gap-6">
