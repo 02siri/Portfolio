@@ -12,9 +12,10 @@ const Experience = () => {
       duration: "March 2025 - June 2025",
       location: "Melbourne, Australia",
       achievements: [
-        "Led cross-functional development team while managing Agile ceremonies, sprint planning, and product backlog maintenance to ensure deliverables align with client requirements and project timelines",
-        "Built a role-based dashboard ecosystem (admin, retailers, insurers, customers) with real-time analytics and interactive workflows using React.js and TypeScript",
-        "Designed and integrated a self-service returns and claims kiosk, streamlining logistics and device assessment processes"
+        "Built and delivered a multi-role dashboard and self-service claims kiosk using Next.js, React.js, and TypeScript—supporting 120K+ monthly users with session-based authentication, real-time analytics, automated reporting, and streamlined workflows for QR-based claims and guided customer interactions.",
+        "Prototyped scalable cloud architecture with AWS API Gateway and evaluated integrations with external services (AWS SageMaker, Blancco, EasyPost), validating them through simulations to propose extensible solutions beyond the MVP stage.",
+        "Led a 5-member cross-functional team as Scrum Master, driving sprint planning, requirement breakdown, and stakeholder alignment; implemented robust test pipelines (Jest, React Testing Library) achieving 90%+ coverage of critical components, reducing regression defects, and improving team velocity by 20% with on-time sprint goal delivery.",
+
       ]
     },
     {
@@ -25,8 +26,9 @@ const Experience = () => {
       duration: "March 2025 - June 2025",
       location: "Melbourne, Australia",
       achievements: [
-        "Mentored students on core software engineering concepts and programming fundamentals",
-        "Guided structured problem-solving and assignment breakdown strategies for academic success"
+        "Mentored 20+ second-year computer science students on core programming and software engineering concepts, helping increase assignment completion rates and confidence in coding practices.",
+        "Introduced structured problem-solving frameworks and guided students in breaking down complex assignments into manageable tasks, resulting in improved project quality and timely submissions.",
+        "Facilitated collaborative group workshops and 1:1 guidance sessions, fostering peer-to-peer support networks and contributing to a 25% improvement in overall academic performance among mentees"
       ]
     }
   ];
